@@ -34,7 +34,15 @@
 
 
 @implementation TKCalendarMonthView
-@synthesize lines,weekdayOfFirst,delegate,dateOfFirst;
+@synthesize lines,weekdayOfFirst,delegate,dateOfFirst, marks, gridDict;
+
+- (void)resetMarks
+{
+    for (NSNumber* index in [self.gridDict allKeys]) {
+        TKCalendarDayView* dayView = [self.gridDict objectForKey:index];
+		[dayView setMarked:[[self.marks objectAtIndex:[index intValue] - 1] boolValue]];
+    }
+}
 
 - (void) buildGrid{
 	
@@ -83,12 +91,14 @@
 	BOOL isCurrentMonth = NO;
 	if(todayNumber > 0)
 		isCurrentMonth = YES;
-	
+
+    NSMutableDictionary* gg = [[NSMutableDictionary alloc] init];
 	for(int i=1;i<=daysInMonth;i++){
 		
 		TKCalendarDayView *dayView = [[TKCalendarDayView alloc] initWithFrame:CGRectMake((position - 1) * 46 - 1, line * 44, 47, 45)];
 		
-		[dayView setMarked:[[marks objectAtIndex:i-1] boolValue]];
+		[dayView setMarked:[[self.marks objectAtIndex:i-1] boolValue]];
+        [gg setObject:dayView forKey:[NSNumber numberWithInt:i]];
 		
 		if(isCurrentMonth && i==todayNumber)
 			[dayView setToday:YES];
@@ -111,6 +121,8 @@
 
 		
 	}
+    self.gridDict = gg;
+    [gg release];
 	
 	if(position != 1){
 		int counter = 1;
@@ -158,7 +170,8 @@
         dateOfFirst = [theDate retain];
 		weekdayOfFirst = [dateOfFirst weekday];
 		todayNumber = todayDay;
-		marks = [marksArray retain];
+		// marks = [marksArray retain];
+        self.marks = marksArray;
 		
 
 		[self buildGrid];

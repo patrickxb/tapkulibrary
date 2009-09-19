@@ -49,7 +49,8 @@
 	int todayNumber;
 	//int daysInMonth;
 	//int lastday;
-	
+
+    NSDictionary* gridDict;
 }
 
 @property (assign, nonatomic) id <TKCalendarMonthViewDelegate> delegate;
@@ -57,10 +58,13 @@
 @property (readonly,nonatomic) int lines;
 @property (readonly,nonatomic) int weekdayOfFirst;
 @property (readonly,nonatomic) NSDate* dateOfFirst;
+@property (nonatomic, retain) NSArray* marks;
+@property (nonatomic, retain) NSDictionary* gridDict;
 
 - (id) initWithFrame:(CGRect)frame startDate:(NSDate*)theDate today:(NSInteger)todayDay marked:(NSArray*)marksArray;
 //- (void) setDate:(NSDate*)firstOfMonth today:(int)dayOfDate marked:(NSArray*)marksArray;
 - (void) selectDay:(int)theDayNumber;
+- (void) resetMarks;
 
 @end
 

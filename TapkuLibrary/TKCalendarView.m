@@ -50,6 +50,15 @@
 	[self setNeedsDisplay];
 }
 
+- (void)reloadMarks
+{
+    if (deck && [deck count] > 1) {
+        TKCalendarMonthView* current = [deck objectAtIndex:1];
+        current.marks = [delegate calendarView:self itemsForDaysInMonth:currentMonth];
+        [current resetMarks];
+        [current setNeedsDisplay];
+    }
+}
 
 - (void) initialLoad{
 	
@@ -83,7 +92,7 @@
 	
 	[next release];
 	[prev release];
-	[currentMonth release];
+	[currentMonthView release];
 
 
 	

@@ -9,3 +9,8 @@ build/*
 # osx noise
 .DS_Store
 profile
+
+*.swp
+*~
+*.mode*
+/build

@@ -30,8 +30,6 @@
 		3B583416101152A40082E0D8 /* TKTimeGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B583414101152A40082E0D8 /* TKTimeGraph.m */; };
 		3B702C5A101AA082008C3D59 /* TKTimeGraphController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B702C58101AA082008C3D59 /* TKTimeGraphController.h */; };
 		3B702C5B101AA082008C3D59 /* TKTimeGraphController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B702C59101AA082008C3D59 /* TKTimeGraphController.m */; };
-		3B7228E01009221D00816B29 /* TKMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7228DE1009221D00816B29 /* TKMapView.h */; };
-		3B7228E11009221D00816B29 /* TKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7228DF1009221D00816B29 /* TKMapView.m */; };
 		3B7228E51009229400816B29 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7228E41009229400816B29 /* MapKit.framework */; };
 		3B722A421009339100816B29 /* TKPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B722A401009339100816B29 /* TKPlace.h */; };
 		3B722A431009339100816B29 /* TKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B722A411009339100816B29 /* TKPlace.m */; };
@@ -338,7 +336,6 @@
 				3B0280B50FFD7AD3004A23C5 /* TKLabelSwitchCell.h in Headers */,
 				3B0286240FFFC5F3004A23C5 /* ABTableViewCell.h in Headers */,
 				3B02862C0FFFC660004A23C5 /* FSIndicatorCell.h in Headers */,
-				3B7228E01009221D00816B29 /* TKMapView.h in Headers */,
 				3B722A421009339100816B29 /* TKPlace.h in Headers */,
 				3B72334E100BB6C700816B29 /* TKOverviewTableViewController.h in Headers */,
 				3B72337F100BB8E400816B29 /* TKOverviewHeaderView.h in Headers */,
@@ -411,7 +408,6 @@
 				3B0280B60FFD7AD3004A23C5 /* TKLabelSwitchCell.m in Sources */,
 				3B0286250FFFC5F3004A23C5 /* ABTableViewCell.m in Sources */,
 				3B02862D0FFFC660004A23C5 /* FSIndicatorCell.m in Sources */,
-				3B7228E11009221D00816B29 /* TKMapView.m in Sources */,
 				3B722A431009339100816B29 /* TKPlace.m in Sources */,
 				3B72334F100BB6C700816B29 /* TKOverviewTableViewController.m in Sources */,
 				3B723380100BB8E400816B29 /* TKOverviewHeaderView.m in Sources */,

@@ -56,6 +56,8 @@
 
 - (id) initWithFrame:(CGRect)frame delegate:(id)delegate;
 
+- (void)reloadMarks;
+
 @end
 
 
